@@ -17,22 +17,25 @@ class User {
 document.getElementById('singUpForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío real del formulario
 
-    const name = document.getElementById("nameInput");
-    const username = document.getElementById("userNameInput");
-    const password = document.getElementById("passwordInput");
-    const edad = parseInt(document.querySelector("#ageInput"));
+    const name = document.getElementById("nameInput").value;
+    const username = document.getElementById("userNameInput").value;
+    const password = document.getElementById("passwordInput").value;
+    const edad = parseInt(document.querySelector("#ageInput").value);
 
     const newUser = new User(name, username, password, edad);
 
 
 
-    if ( !name.value || !username.value || !password.value || isNaN(edad.value) || edad.value <= 0 ) {
+    if ( !name || !username || !password|| isNaN(edad) || edad <= 0 ) {
         alert("Todos los campos son obligatorios");
-        return ;
+
+        return;
 
     } else {
+        
         localStorage.setItem("user_" + newUser.id, JSON.stringify(newUser));
         console.log(newUser); 
+        
 
     }
 
