@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="login-form">
+
+        <form action="/submit" method="get" id="singUpForm">
+
+        <div class="input-div">
+    <label for="nameInput" class="label-txt">Nombre:</label> <br>
+        <input type="text" id="nameInput" placeholder="Pablo Picasso..." name="name">
+        </div>
+
+        <div class="input-div">
+    <label for="userNameInput" class="label-txt">Nombre de usuario:</label> <br> 
+        <input type="text" id="userNameInput" placeholder="PabloNicaso123" name="userName">
+        </div>
+
+        <div class="input-div">
+    <label for="passwordInput" class="label-txt">Contraseña</label> <br>
+       <input type="password" id="passwordInput" placeholder="Contraseña" name="password">
+        </div>
+
+        <div class="input-div">
+    <label for="ageInput" class="label-txt">Edad:</label> <br>
+        <input type="number" id="ageInput" class="number-input" name="age">
+        </div>
+
+               <button type="submit">Registrarse</button>
+
+        </form>
+
+    </div> 
+
+    
+    <script src="register.js"></script>
+
+</body>
+</html>
